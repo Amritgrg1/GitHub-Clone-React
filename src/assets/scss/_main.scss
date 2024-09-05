@@ -1,0 +1,123 @@
+* {
+  background-color: #0d0f14;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  .left-bar {
+    display: flex;
+    gap: 1.2rem;
+
+    .github-hamburger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      border: 0.5px solid #58595a;
+      border-radius: 6px;
+
+      .bar {
+        display: inline-block;
+        position: relative;
+        width: 16px;
+        height: 12px;
+
+        span {
+          position: absolute;
+          height: 1.5px;
+          width: 100%;
+          background-color: #9198a1;
+          border-radius: 2px;
+          transition: all 0.3s ease-in-out;
+
+          &:nth-child(1) {
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            top: 5px;
+          }
+
+          &:nth-child(3) {
+            bottom: 0;
+          }
+        }
+
+        &.open {
+          span:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+          }
+
+          span:nth-child(2) {
+            opacity: 0;
+          }
+
+          span:nth-child(3) {
+            transform: translateY(-5px) rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    .github-logo {
+      .git-icon {
+        // font-size: 2.8rem;
+        color: white;
+        height: 33px;
+        width: 33px;
+      }
+    }
+
+    .user-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .right-bar {
+    display: flex;
+    gap: 10px;
+    .search-icon,
+    .unread-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      border: 0.5px solid #58595a;
+      border-radius: 6px;
+      .icon {
+        font-size: 1.2rem;
+        color: #9198a1;
+      }
+    }
+
+    .profile-image {
+        border-radius: 50%; /* Perfect circle */
+        overflow: hidden; /* Ensures the image stays within the circular boundary */
+        display: inline-block; /* To ensure the image behaves like a block inside */
+        height: 34px;
+        width: 34px;
+      
+        .img-size {
+          height: 100%; /* Ensures the image fills the container */
+          width: 100%; /* Same as height for a square shape */
+          object-fit: cover; /* Keeps the image aspect ratio while filling the container */
+          transform: scale(1.3); /* Scales the image for a zoom effect */
+        }
+      }
+      
+  }
+}

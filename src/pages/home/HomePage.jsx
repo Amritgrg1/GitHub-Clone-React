@@ -1,8 +1,11 @@
 import React from 'react'
+import TopNavbar from '../../components/TopNavbar'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+        <TopNavbar />
+    </div>
   )
 }
 
